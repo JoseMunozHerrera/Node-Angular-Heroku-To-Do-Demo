@@ -40,7 +40,7 @@
 
     oTable.addColumn(new sap.ui.table.Column({
         label: new sap.ui.commons.Label({text: "CustomerID"}),
-        template: new sap.ui.commons.TextField().bindProperty("value","CustomerID"),
+        template: new sap.ui.commons.TextField().bindProperty("value","clave"),
     //  sortProperty: "Customer",
         //filterProperty: "Customer",
         width: "200px"
@@ -55,10 +55,10 @@
     }));
 
     var oModel = new sap.ui.model.odata.ODataModel(
-    "https://cors-anywhere.herokuapp.com/services.odata.org/Northwind/Northwind.svc",true,"ABCD","1234");
+    "https://odata-2-virginia.heroku.com/odata/v4/9986b8cd4ee442dc824015a20b48cb51",true,"47c3ad844d6e4b7b8b9c8d8348514784","c181fc2b483448d7a91635b2b4432e29");
     oTable.setModel(oModel);
     // bind path of oDataModel to table rows
-        oTable.bindRows("/Orders");
+        oTable.bindRows("/test$tabla");
     oTable.placeAt("content");
 
           
