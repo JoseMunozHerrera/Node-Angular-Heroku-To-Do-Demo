@@ -7,6 +7,7 @@ var database = require('./config/database'); 			// load the database config
 var morgan   = require('morgan');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
+var cors = require('cors'); app.use(cors());
 
 var connString = 'postgres://plfjrfjflbxwed:429871ae48ec51a54f49930e8de464221b74a3734de9dfe01a78d95ea418d982@ec2-54-83-192-245.compute-1.amazonaws.com:5432/d5i7lgob0ufa26';
 
